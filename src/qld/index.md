@@ -3,6 +3,7 @@ layout: state
 title: Queensland Electorates
 state: qld
 state_long: Queensland
+tags: state
 electorates:
   - id: blair
     name: Blair

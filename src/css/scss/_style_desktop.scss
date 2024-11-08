@@ -1,0 +1,168 @@
+@media only screen and (min-width: 550px) {
+
+  /*  ##  State Containers  ##  */
+  // While inside 'stat-container' they form an self-arranging block
+  // of 3, 4 or 5 when grouped
+  :root {
+    --typescale: var(--typescale-lg); // Make typescale steeper on non-mobile screens
+  }
+
+  .stat-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .stat-block {
+    margin: 0;
+  }
+
+  .col {
+    width: 100%;
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-basis: 30%;
+    margin: 0;
+  }
+
+  /* 2 siblings */
+
+  .col:nth-of-type(1):nth-last-of-type(2n),
+  .col:nth-of-type(1):nth-last-of-type(2n)~.col {
+    //border: 2px green solid;
+    flex-basis: 50%;
+  }
+
+  /* 3 siblings */
+  .col:nth-of-type(1):nth-last-of-type(3n),
+  .col:nth-of-type(1):nth-last-of-type(3n)~.col {
+    //border: 2px cyan solid;
+    flex-basis: 33%;
+  }
+
+  /* 4 siblings */
+  .col:nth-of-type(1):nth-last-of-type(4n),
+  .col:nth-of-type(1):nth-last-of-type(4n)~.col {
+    //border: 2px black solid;
+    flex-basis: 50%;
+  }
+
+  /* This is used for stat-blocks where icons float right of big numbers  */
+
+  .float.icon {
+    display: block;
+    width: 40cqi;
+    height: 40cqi;
+    margin: 1rem 5cqi 0 -5cqi;
+    float: right;
+  }
+
+  .flow-content {
+    columns: 2 200px;
+    column-gap: 2em;
+
+    h2 {
+      column-span: all;
+    }
+  }
+
+  /* Static permanent States nav */
+  /* is a CSS-only hamburger in mobile */
+
+  .nav-states {
+    margin-top: 2rem;
+    width: 25%;
+    height: auto;
+    overflow: auto;
+
+    input.switch {
+      position: absolute;
+      right: 2rem; // OK, a bit sneaky - hiding hamburger behind the live nav menu when not being used.
+      z-index: -1;
+
+      +ul.states {
+        position: static;
+        padding: 0;
+        margin: 0;
+        width: auto;
+      }
+    }
+
+    li {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      font-size: calc(var(--base-font-size) * var(--typescale) * var(--typescale) * var(--typescale));
+      line-height: calc(var(--base-line-height) * 2);
+      font-weight: 400;
+      font-family: var(--font-TT-bold);
+      text-indent: 3rem;
+      text-transform: uppercase;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        background: rgba(0, 0, 0, 0);
+        transition: background .6s ease-in-out;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.4);
+          transition: background .3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 765px) {
+
+  /* 4 siblings */
+  .col:nth-of-type(1):nth-last-of-type(4n),
+  .col:nth-of-type(1):nth-last-of-type(4n)~.col {
+    //border: 2px black solid;
+    flex-basis: 25%;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .summary {
+    margin: 1rem 0 2rem;
+    background-size: 100% auto;
+    .container {
+      justify-content: space-between;
+
+      //outline: 2px dashed orange;
+      .col {
+        //outline: 2px dashed greenyellow;
+        margin: 0 2rem 0 0;
+
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .flow-content {
+    columns: 3 150px;
+  }
+
+  .electorate-list {
+    columns: 4 auto;
+  }
+
+  // when the state nav is on the right, we leave space for it.
+  .nav-states+.flow-content {
+    columns: 2 150px;
+    width: 73%;
+    margin-right: 2%;
+  }
+
+}

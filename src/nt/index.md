@@ -3,6 +3,7 @@ layout: state
 title: Northern Territory Electorates
 state: nt
 state_long: Northern Territory
+tags: state
 electorates:
   - id: lingiari
     name: Lingiari

@@ -3,6 +3,7 @@ layout: state
 title: Western Australia Electorates
 state: wa
 state_long: Western Australia
+tags: state
 electorates:
   - id: brand
     name: Brand

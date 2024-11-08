@@ -3,6 +3,7 @@ layout: state
 title: Victoria Electorates
 state: vic
 state_long: Victoria
+tags: state
 electorates:
   - id: aston
     name: Aston

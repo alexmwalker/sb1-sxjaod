@@ -1,0 +1,87 @@
+
+.stat-container {
+  display: block;
+  margin: 0;
+  font-family: var(--font-TT-bold);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  margin-bottom: 2rem;
+
+}
+.col {
+  // content-aware magic cols
+  margin: 0;
+  box-sizing: border-box;
+  container-type: inline-size;
+}
+.stat-block {
+  text-align: center;
+  background-size: auto 100%;
+  padding: 0.25rem 2rem 1.5rem 2rem;
+  break-inside: avoid;
+  h3 {
+    text-transform: uppercase;
+    //line-height: 90px;
+    font-weight: 900;
+    margin: 2rem 0 1rem;
+    font-size: var(--stat-font-size);
+    font-family: var(--font-TT-bold);
+    //line-height: 30cqi;
+    line-height: 26cqi;
+    span {
+      display: block;
+      //font-size: calc(var(--stat-font-size) / 2.5);
+      //line-height: calc(var(--stat-font-size) / 2.8);
+      //letter-spacing: calc(var(--stat-font-size) / 50);
+      font-size: calc(var(--stat-font-size) / 2.8);
+      line-height: calc(var(--stat-font-size) / 3);
+      letter-spacing: calc(var(--stat-font-size) / 38);
+      font-weight: 700;
+      span {
+        //font-size: calc(var(--stat-font-size) / 4.5);
+        //line-height: calc(var(--stat-font-size) / 3);
+        font-size: calc(var(--stat-font-size) / 4.5);
+        line-height: calc(var(--stat-font-size) / 2.6);
+      }
+    }
+  }
+  p {
+    font-size: clamp(1rem, 4cqi, 3rem);
+    //outline: 2px dashed dodgerblue;
+    //line-height: clamp(1rem, 4cqi, 3rem);
+    line-height: clamp(1.18rem, 4.5cqi, 3.8rem);
+    font-family: "TT Commons Regular";
+    font-weight: 500;
+  }
+}
+.blue-bg, .red-bg, .white-bg{
+  h3{
+  font-style:normal
+  }
+}
+.blue-bg {
+  background-image: url("/images/blue-bg-left.jpg");
+  color: #fff;
+  h3 {
+    color: #fff;
+  }
+}
+.red-bg {
+  background-image: url("/images/red-bg-right.jpg");
+  color: #fff;
+  h3 {
+    color: #fff;
+  }
+}
+.white-bg {
+  //border: 1px solid #555;
+  -webkit-box-shadow:inset 0px 0px 0px 1px #9092b8;
+  -moz-box-shadow:inset 0px 0px 0px 1px #9092b8;
+  box-shadow:inset 0px 0px 0px 1px #9092b8;
+  h3 {
+    color: var(--sjs-red);
+  }
+  
+}
