@@ -1,0 +1,9 @@
+<div class="crumbs">
+    <a href="/">Home</a>
+    {%- if (state) -%}
+    | <a href="/states/{{ state }}">{{ state_long }} </a>
+    {%- endif -%}
+    {%- if (electorate) -%}
+    | {{ electorate }}
+    {%- endif -%}
+</div>

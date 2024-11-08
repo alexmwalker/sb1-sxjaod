@@ -8,6 +8,7 @@
 </head>
 <body>
     {% include "_hero.njk" %}
+    
     <header>
         <nav>
             <a href="/">Home</a>
@@ -21,9 +22,17 @@
             <a href="/nt">NT</a>
         </nav>
     </header>
+
     <main>
+
+        {% include "_crumbs.njk" %}
+
+        {% include "_statelist.njk" %}
+
         {{ content | safe }}
+
     </main>
+
     <footer>
         <p>&copy; {% year %} Australian Electoral Reports</p>
     </footer>

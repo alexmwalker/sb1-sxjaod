@@ -3,6 +3,7 @@ layout: state
 title: Tasmania Electorates
 state: tas
 state_long: Tasmania
+tags: state
 electorates:
   - id: bass
     name: Bass

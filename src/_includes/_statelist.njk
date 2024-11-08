@@ -1,0 +1,8 @@
+<div class="nav-states">
+    <input type="checkbox" class="switch" />
+    <ul class="states">
+        {% for state in collections.state %}
+        <li><a href="{{ state.url }}">{{ state.data.state }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

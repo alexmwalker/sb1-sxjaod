@@ -3,6 +3,7 @@ layout: state
 title: South Australia Electorates
 state: sa
 state_long: South Australia
+tags: state
 electorates:
   - id: adelaide
     name: Adelaide

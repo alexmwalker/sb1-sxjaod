@@ -1,0 +1,79 @@
+.flow-content{
+  padding: 2rem 0;
+  scroll-behavior: smooth;
+  // outline: 2px dashed greenyellow;
+  h2{
+  column-span: all; 
+  }
+  h3 {
+    break-after: avoid;
+  }
+  &>p:first-of-type{ // I
+    margin-top:0;
+    font-size: 1.3rem;
+    color: #2a3578;
+    font-family: "TT Commons Medium", serif;
+    font-weight:600;
+  }
+  img{
+    width: 95%;          /* Scale image to column width */
+    height: auto;        /* Maintain aspect ratio */
+    object-fit: cover; 
+    margin-bottom: 1rem;
+  }
+  
+  a[href^='#'] {
+    padding: 0 0.25em 0;
+    font-size: 0.75em;
+    vertical-align: super;
+    counter-increment: footnotes; /* 1 */
+    cursor: default; /* 2 */
+    outline: none; /* 2 */
+    position: relative;
+    display: inline-block;
+   
+  }
+}
+.footnote-ref{
+  line-height: 0;
+}
+// NOTE: If the `_nav_states` component is present (immediately before .flow-content) 
+// we need to create space for it by re-sizing flow-content to 75% width and three columns
+
+.footnotes{
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  column-span: all; 
+  background: var(--sjs-footnote);
+  ol{
+    padding: 0;
+    margin: 0;
+  }
+  h4{
+    color:#333;
+    border-bottom: 3px dotted #333;
+    font-size: calc(var(--base-font-size) * var(--typescale));
+    line-height: calc(var(--base-line-height) * 2);
+  }
+  li{
+    margin-left: 1rem;
+    padding-left: 1rem;
+    p{
+      font-size: small;
+      line-height: calc(var(--base-line-height) / var(--typescale));
+      margin: 0;
+    }
+  }
+  :target {
+    animation: fader 8s ease-out;
+  }
+}
+@keyframes fader {
+  0%{
+    background: khaki
+  }
+  100%{
+    background: transparent
+  }
+}
+

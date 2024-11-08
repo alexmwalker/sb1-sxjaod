@@ -3,6 +3,7 @@ layout: state
 title: New South Wales Electorates
 state: nsw
 state_long: New South Wales
+tags: state
 electorates:
   - id: banks
     name: Banks

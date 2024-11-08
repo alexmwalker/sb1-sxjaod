@@ -1,0 +1,47 @@
+.block {
+  //width: 90%;
+  width: 76%;
+  background: #fff;
+  color: var(--sjs-navy);
+  //margin: 0 0 2rem;
+  margin: 0;
+  padding: 1rem 2rem 1.5rem 2rem;
+  //padding: 1.5rem 1rem;
+  break-inside: avoid-column;
+  border-bottom: 3px dotted var(--sjs-navy);
+  p {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 28px;
+    //font-size: calc(
+      //var(--base-font-size) * var(--typescale) * var(--typescale)
+    //);
+    font-size: calc(
+      var(--base-font-size) * var(--typescale) * var(--typescale) * 0.8
+    );
+  }
+  &.red {
+    background: var(--sjs-red);
+    border-bottom: none;
+    p {
+      color: #fff;
+    }
+  }
+  &.navy {
+    background: var(--sjs-navy);
+    border-bottom: none;
+    p {
+      color: #fff;
+    }
+  }
+  &.blue {
+    background: #233F88 url(/images/Dark-RGB.jpg);
+    background-size: cover;
+    border-bottom: none;
+    p {
+      color: #fff;
+    }
+  }
+}

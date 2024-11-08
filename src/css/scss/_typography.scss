@@ -1,0 +1,53 @@
+body{
+  font-family: var(--font-TT-reg);
+}
+h2, h3, h4 {
+  color: #2a3578;
+  text-transform: uppercase;
+  font-family: var(--font-Roboto-condensed);
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  margin: 0 0 1rem 0;
+}
+h2{
+  font-size: calc(var(--base-font-size) * var(--typescale) * var(--typescale) * var(--typescale)* var(--typescale) * var(--typescale));
+  font-weight: 800;
+  font-style: italic;
+  font-variation-settings:
+    "wdth" 80;
+  letter-spacing:-1px;
+  line-height: calc(var(--base-font-size) * var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale) * var(--typescale));
+}
+h3{
+  font-size: calc(var(--base-font-size) * var(--typescale) * var(--typescale) * var(--typescale));
+  line-height: calc(var(--base-line-height) * 1.25);
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing:-1px;
+}
+h4{
+  font-size: calc(var(--base-font-size) * var(--typescale) * 1.1);
+  line-height: calc(var(--base-line-height) * 1);
+  font-weight: 800;
+}
+p{
+  font-size: calc(var(--base-font-size) * 1.2);
+  line-height: var(--base-line-height);
+  font-family: var(--font-TT-reg);
+  font-weight: 300;
+}
+.dotted{
+  margin-bottom: 1em;
+  &:after{
+    position: relative;
+    display: block;
+    content: '';
+    width: auto;
+    height: 0px;
+    margin-right: 5rem;
+    border-bottom: 3px dotted #283273; 
+    bottom: -0.5em;
+    left: 0;
+  }
+}
