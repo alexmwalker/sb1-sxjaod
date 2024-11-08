@@ -1,0 +1,13 @@
+<section class="hero solution {{ state }}">
+    <div class="container">
+        <h1 class="title"> <span class="social">Social</span><span class="justice">Justice</span><span
+                class="stocktake">Stocktake</span><span class="date">2025</span></h1>
+        <p class="banner">Taking Stock Of Our Communities</p>
+        {%- if tags == "state" or tags == "electorate" -%}
+            <div class="location {{ state }}">{{ (state_long) }} </div>
+        {%- else -%}
+            <div class="location aus">Australia </div>
+        {%- endif -%}
+        
+    </div>
+</section>

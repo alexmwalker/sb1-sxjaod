@@ -1,0 +1,17 @@
+{
+  "name": "australian-electoral-reports",
+  "version": "1.0.0",
+  "description": "Australian Electoral Reports Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "sass": "sass src/scss:src/css --watch"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "markdown-it": "^14.1.0",
+    "markdown-it-footnote": "^4.0.0",
+    "sass": "^1.69.5"
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Australian Electoral Reports</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    {% include "_hero.njk" %}
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/nsw">NSW</a>
+            <a href="/vic">VIC</a>
+            <a href="/qld">QLD</a>
+            <a href="/wa">WA</a>
+            <a href="/sa">SA</a>
+            <a href="/tas">TAS</a>
+            <a href="/act">ACT</a>
+            <a href="/nt">NT</a>
+        </nav>
+    </header>
+    <main>
+        {{ content | safe }}
+    </main>
+    <footer>
+        <p>&copy; {% year %} Australian Electoral Reports</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,21 @@
+---
+layout: base
+---
+<div class="state-page">
+    <div class="state-content">
+        {{ content | safe }}
+    </div>
+    
+    <div class="electorate-list">
+        <h2>Electorates</h2>
+        {% if electorates %}
+        <ul>
+            {% for electorate in electorates %}
+            <li><a href="{{ page.url }}{{ electorate.id }}">{{ electorate.name }}</a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No electorates available.</p>
+        {% endif %}
+    </div>
+</div>
